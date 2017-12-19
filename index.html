@@ -105,6 +105,7 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <img class="img-responsive" src="" />
+                  <p class="debug-this"></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -136,8 +137,8 @@
     <script>
     $(document).ready(function () {
             $('#myModal').on('show.bs.modal', function (e) {
-                var image2 = this.src;
                 var image = $(e.relatedTarget).attr('src');
+                $(".debug-this").innerHTML = image
                 $(".img-responsive").attr("src", image2);
             });
     });
